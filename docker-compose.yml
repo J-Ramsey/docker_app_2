@@ -1,0 +1,46 @@
+version: '2'
+
+services:
+    app:
+        container_name: app
+        build: docker/app
+        ports:
+            - "80:80"
+        links:
+            - db
+            - mailcatcher
+        volumes:
+            - ./:/var/www/html
+
+
+    db:
+        container_name: db
+        image: mariadb
+        environment:
+            MYSQL_ROOT_PASSWORD: dev
+            MYSQL_DATABASE: dev
+            MYSQL_USER: dev
+            MYSQL_PASSWORD: dev
+        ports:
+            - "3306:3306"
+        volumes:
+            - db:/var/lib/mysql
+
+    #############################
+    #                           #
+    # To do                     #
+    # _________________________ #
+    #                           #
+    # Install Elasticsearch     #
+    # Install Logstash          #
+    #                           #
+    #############################
+
+    mailcatcher:
+        container_name: mailcatcher
+        image: schickling/mailcatcher
+        ports:
+            - "1080:1080"
+
+volumes:
+    db: ~
