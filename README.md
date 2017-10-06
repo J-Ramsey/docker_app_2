@@ -37,8 +37,7 @@ Projet réalisé dans le cadre des études à l'ESGI
 * Lancez le projet Docker selon votre choix précédent :
 * (Si vous avez choisi Docker Toolbox, lancez Docker Quickstart Terminal pour les prochaines commandes suivantes)
 	* Placez-vous dans le dossier du projet
-	* Buildez le projet avec `docker-compose build`
-	* Lancez le projet avec `docker-compose up -d`
+	* Lancez le projet avec `make installation`
 
 [Retour au sommaire](#sommaire)
 ## Contributors
