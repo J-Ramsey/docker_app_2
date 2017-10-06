@@ -22,13 +22,13 @@ services:
         container_name: php
         build: docker/php
         ports:
-            - 9000:9000
+            - "9000:9000"
         links:
             - db
             - mailcatcher
         volumes:
             - ./:/var/www/app
-            - ./var/logs/app:/var/www/app/var/logs
+            - ./var/logs:/var/www/app/var/logs
 
     ############################################
     #          Database Configuration          #
