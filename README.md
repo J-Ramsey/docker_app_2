@@ -1,4 +1,4 @@
-# sf - Description en Français
+# App 2 - Description en Français
 
 ## Sommaire
 
